@@ -6,6 +6,9 @@ from botocore.vendored import requests
 
 def lambda_handler(event, context):
 
+    amount = event.amount
+    account = event.account
+    invoice=event.invoce
 
 
     headers = {
@@ -19,11 +22,11 @@ def lambda_handler(event, context):
 "buyerId": "324323300993",
 "actionType": "1",
 "payment": {
-"accountNumber": "3287338388333",
+"accountNumber": account,
 "accountType": "2",
 "accountLimit": "100",
 "cardAccountExpiryDate": "02/2021",
-"paymentGrossAmount": "2.50",
+"paymentGrossAmount": amount,
 "currencyCode": "USD",
 "paymentExpiryDate": "2018-05-30",
 "paymentRequestDate": "2018-05-14",
@@ -54,9 +57,9 @@ def lambda_handler(event, context):
 },
 "invoices": [
 {
-"invoiceNumber": "INV01",
+"invoiceNumber": invoice,
 "invoiceDate": "2018-04-24",
-"invoiceAmount": "3.75",
+"invoiceAmount": amount,
 "PurchaseOrderNumber": "PO1234",
 "PurchaseOrderDate": "2018-02-01"
 }

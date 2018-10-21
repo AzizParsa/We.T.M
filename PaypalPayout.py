@@ -23,7 +23,7 @@ def lambda_handler(event, context):
     {
       "recipient_type": "EMAIL",
       "amount": {
-        "value": "15",
+        "value": event.amount,
         "currency": "USD"
       },
       "note": "Thanks for your patronage!",
