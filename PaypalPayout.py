@@ -8,7 +8,7 @@ def lambda_handler(event, context):
 
     headers = {
          'Content-Type': 'application/json',
-      'Authorization': 'Bearer A21AAEu9ec0iDSYCHkAcSKQ5NBvNAMIiS6ZyiqlCYLes1YquTaSAltrrw9RU6m5apmA8uz87jngtsEuIKR9yxlttIYT1cED5Q'
+      'Authorization': 'Bearer Sandbox-tocken'
 
     }
 
